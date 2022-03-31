@@ -23,4 +23,11 @@ public class FizzBuzzShould {
         FizzBuzz fizzBuzz = new FizzBuzz();
         Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().get(4));
     }
+
+    @Test
+    public void buildFizzBuzzFifteenthPlaceShouldBeFizzBuzz() {
+        String expected = "FizzBuzz";
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().get(14));
+    }
 }
