@@ -9,4 +9,13 @@ public class FizzBuzzShould {
         FizzBuzz fizzBuzz = new FizzBuzz();
         Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().get(0));
     }
+
+    @Test
+    public void buildFizzBuzzThirdPlaceShouldBeFizz() {
+        String expected = "Fizz";
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().get(2));
+    }
+
+
 }
