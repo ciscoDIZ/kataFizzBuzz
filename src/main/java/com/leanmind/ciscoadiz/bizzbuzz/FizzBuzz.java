@@ -14,7 +14,8 @@ public class FizzBuzz {
             }
 
             if ((i+1) % 5 == 0) {
-                number = new Text("Buzz");
+                number = number.equals(new Text("Fizz")) ?
+                        new Text(number.getValue()+"Buzz") : new Text("Buzz");
             }
             result.add(number);
         }

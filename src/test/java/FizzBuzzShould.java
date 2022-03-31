@@ -28,4 +28,11 @@ public class FizzBuzzShould {
         FizzBuzz fizzBuzz = new FizzBuzz();
         Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().toArray()[4]);
     }
+
+    @Test
+    public void buildFizzBuzzFifteenthPlaceShouldBeFizzBuzz() {
+        Text expected = new Text("FizzBuzz");
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().toArray()[14]);
+    }
 }
