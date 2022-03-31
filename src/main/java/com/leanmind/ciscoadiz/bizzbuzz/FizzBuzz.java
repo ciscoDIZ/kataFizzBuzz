@@ -12,6 +12,10 @@ public class FizzBuzz {
             if ((i+1) % 3 == 0) {
                 number = new Text("Fizz");
             }
+
+            if ((i+1) % 5 == 0) {
+                number = new Text("Buzz");
+            }
             result.add(number);
         }
         return result;
