@@ -17,5 +17,10 @@ public class FizzBuzzShould {
         Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().get(2));
     }
 
-
+    @Test
+    public void buildFizzBuzzFifthPlaceShouldBeBuzz() {
+        String expected = "Buzz";
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().get(4));
+    }
 }
