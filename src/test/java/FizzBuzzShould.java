@@ -15,5 +15,10 @@ public class FizzBuzzShould {
         Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().toArray()[0]);
     }
 
-
+    @Test
+    public void buildFizzBuzzThirdPlaceShouldBeFizz() {
+        Text expected = new Text("Fizz");
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().toArray()[2]);
+    }
 }

@@ -9,6 +9,9 @@ public class FizzBuzz {
 
         for (int i = 0; i < 100; i++) {
             Text number = new Text((i+1)+"");
+            if ((i+1) % 3 == 0) {
+                number = new Text("Fizz");
+            }
             result.add(number);
         }
         return result;
