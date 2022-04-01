@@ -28,7 +28,13 @@ public class Text implements Comparable<String> {
 
     @Override
     public int compareTo(String s) {
-        return 0;
+        if (s.equals(value)){
+            return 0;
+        }
+        if (s.charAt(0) > value.charAt(0)){
+            return -1;
+        }
+        return 1;
     }
 
     @Override

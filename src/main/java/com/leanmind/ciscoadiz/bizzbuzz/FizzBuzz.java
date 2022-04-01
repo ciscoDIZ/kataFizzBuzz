@@ -14,13 +14,14 @@ public class FizzBuzz {
     private void make(List<Text> result) {
         for (int i = 0; i < 100; i++) {
             Text number = new Text((i+1)+"");
+            Text fizz = new Text("Fizz");
             if (isFizz(i)) {
-                number = new Text("Fizz");
+                number = fizz;
             }
 
             if (isBuzz(i)) {
-                number = number.equals(new Text("Fizz")) ?
-                        new Text(number.getValue()+"Buzz") : new Text("Buzz");
+                Text buzz = new Text("Buzz");
+                number = number.equals(fizz) ? new Text(number.getValue()+buzz) : buzz;
             }
             result.add(number);
         }
