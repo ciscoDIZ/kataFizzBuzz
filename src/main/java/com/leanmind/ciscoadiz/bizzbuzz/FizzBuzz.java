@@ -7,6 +7,11 @@ public class FizzBuzz {
     public List<Text> buildFizzBuzz() {
         List<Text> result = new ArrayList<>();
 
+        make(result);
+        return result;
+    }
+
+    private void make(List<Text> result) {
         for (int i = 0; i < 100; i++) {
             Text number = new Text((i+1)+"");
             if ((i+1) % 3 == 0) {
@@ -19,6 +24,5 @@ public class FizzBuzz {
             }
             result.add(number);
         }
-        return result;
     }
 }
