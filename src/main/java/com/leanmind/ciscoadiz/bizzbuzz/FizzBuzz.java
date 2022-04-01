@@ -14,15 +14,23 @@ public class FizzBuzz {
     private void make(List<Text> result) {
         for (int i = 0; i < 100; i++) {
             Text number = new Text((i+1)+"");
-            if ((i+1) % 3 == 0) {
+            if (isFizz(i)) {
                 number = new Text("Fizz");
             }
 
-            if ((i+1) % 5 == 0) {
+            if (isBuzz(i)) {
                 number = number.equals(new Text("Fizz")) ?
                         new Text(number.getValue()+"Buzz") : new Text("Buzz");
             }
             result.add(number);
         }
+    }
+
+    private boolean isBuzz(int i) {
+        return (i + 1) % 5 == 0;
+    }
+
+    private boolean isFizz(int i) {
+        return (i + 1) % 3 == 0;
     }
 }
