@@ -28,11 +28,11 @@ public class FizzBuzz {
             return result;
     }
 
-    private boolean isBuzz(int i) {
-        return i % 5 == 0;
+    private boolean isBuzz(int number) {
+        return number % 5 == 0;
     }
 
-    private boolean isFizz(int i) {
-        return i % 3 == 0;
+    private boolean isFizz(int number) {
+        return number % 3 == 0;
     }
 }
