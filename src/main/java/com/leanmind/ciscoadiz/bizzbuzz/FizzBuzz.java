@@ -7,24 +7,25 @@ public class FizzBuzz {
     public List<Text> buildFizzBuzz() {
         List<Text> result = new ArrayList<>();
 
-        make(result);
+
+        for (int i = 0; i < 100; i++) {
+            result.add(make(i));
+        }
         return result;
     }
 
-    private void make(List<Text> result) {
-        for (int i = 0; i < 100; i++) {
-            Text number = new Text((i+1)+"");
+    private Text make(int number) {
+            Text result = new Text((number+1)+"");
             Text fizz = new Text("Fizz");
-            if (isFizz(i)) {
-                number = fizz;
+            if (isFizz(number)) {
+                result = fizz;
             }
 
-            if (isBuzz(i)) {
+            if (isBuzz(number)) {
                 Text buzz = new Text("Buzz");
-                number = number.equals(fizz) ? new Text(number.getValue()+buzz) : buzz;
+                result = result.equals(fizz) ? new Text(result.getValue()+buzz) : buzz;
             }
-            result.add(number);
-        }
+            return result;
     }
 
     private boolean isBuzz(int i) {
