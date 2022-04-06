@@ -5,8 +5,7 @@ import java.util.*;
 public class FizzBuzz {
 
     public List<Text> buildFizzBuzz() {
-        List<Text> result = new ArrayList<>();
-
+        var result = new ArrayList<Text>();
 
         for (int i = 1; i <= 100; i++) {
             result.add(make(i));
@@ -15,17 +14,15 @@ public class FizzBuzz {
     }
 
     private Text make(int number) {
-            Text result = new Text(number);
-            Text fizz = new Text("Fizz");
+            var result = new Text(number);
+            final Text fizz = new Text("Fizz");
+            final Text buzz = new Text("Buzz");
             if (isFizz(number)) {
                 result = fizz;
-
             }
 
             if (isBuzz(number)) {
-                Text buzz = new Text("Buzz");
                 result = result.equals(fizz) ? result.concat(buzz) : buzz;
-
             }
 
             return result;
