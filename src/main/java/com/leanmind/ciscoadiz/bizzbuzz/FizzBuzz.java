@@ -10,6 +10,7 @@ public class FizzBuzz {
         for (int i = 1; i <= 100; i++) {
             result.add(generator.make(i));
         }
+        System.out.println(result);
         return result;
     }
 
