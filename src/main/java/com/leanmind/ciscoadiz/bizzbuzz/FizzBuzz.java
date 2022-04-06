@@ -15,7 +15,7 @@ public class FizzBuzz {
     }
 
     private Text make(int number) {
-            Text result = new Text((number)+"");
+            Text result = new Text(number);
             Text fizz = new Text("Fizz");
             if (isFizz(number)) {
                 result = fizz;

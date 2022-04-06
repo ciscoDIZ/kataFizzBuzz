@@ -11,6 +11,10 @@ public class Text implements Comparable<String> {
         this.value = value;
     }
 
+    public Text(int value) {
+        this.value = String.valueOf(value);
+    }
+
     public String getValue() {
         return value;
     }
