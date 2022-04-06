@@ -1,6 +1,8 @@
 package com.leanmind.ciscoadiz.bizzbuzz;
 
 import java.util.Objects;
+import java.util.Set;
+import java.util.SortedSet;
 
 public class Text implements Comparable<String> {
     private final String value;
@@ -11,6 +13,10 @@ public class Text implements Comparable<String> {
 
     public String getValue() {
         return value;
+    }
+
+    public Text concat(Text text) {
+        return new Text(value.concat(text.getValue()));
     }
 
     @Override
@@ -28,6 +34,7 @@ public class Text implements Comparable<String> {
 
     @Override
     public int compareTo(String s) {
+
         if (s.equals(value)){
             return 0;
         }

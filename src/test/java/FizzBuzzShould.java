@@ -33,6 +33,7 @@ public class FizzBuzzShould {
     public void buildFizzBuzzFifteenthPlaceShouldBeFizzBuzz() {
         Text expected = new Text("FizzBuzz");
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         Assert.assertEquals(expected, fizzBuzz.buildFizzBuzz().toArray()[14]);
     }
 }
